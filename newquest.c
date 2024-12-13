@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 #define LOOP_max 2
+#include "mathOps.h"
 
 /*
 Fazer um programa em "C" que solicite 2 números e ao final informe para o usuário: 
@@ -12,24 +13,12 @@ c) O quadrado do primeiro número;
 d) A raiz quadrada da soma dos quadrados; 
 e) O módulo do primeiro número.
  */
-int moduleCalc(int number)
-{
-    return (number<0)? -number:number;
-}
+
 void module(int number[])
 {
     printf("\nmodulo primeiro num %d \n", moduleCalc(number[0]));
 }
-double squareRoot(double number)//sub d
-{
-    if(number <0) exit(1);
-    double precision =0.000000001;
-    double step=number;
-      while ((step * step - step) > precision || (number - step * step) > precision) {
-        step = (step + number / step) / 2.0;
-    }
-    return step;
-}
+
 void powAndSquare(int number[])//d 
 {
 //d) A raiz quadrada da soma dos quadrados; 
@@ -44,10 +33,7 @@ void twoPow(int number[])//c
 {
     printf("\nquadrado primeiro %d\n", atPow(number[0]));
 }
-int atPow(int number)//sub b
-{
-    return number*number;
-}
+
 void prod(int number[])//b
 {
     int prod =number[0]*atPow(number[1]);

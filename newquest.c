@@ -56,10 +56,16 @@ int main(int argc, char*argv[])
     for(int i= 0; i<LOOP_max; i++)
     {
         printf("\nputs n%d ", i);
-        scanf("%d", number[i]);
+        scanf(" %d", &number[i]);
     }
     sum(number);
+    prod(number);
+    twoPow(number);
+    powAndSquare(number);
+    module(number);
 
 
 return 0;
 }
+
+//todo: debugar

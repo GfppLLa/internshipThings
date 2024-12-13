@@ -8,12 +8,13 @@ int moduleCalc(int number)
 
 double squareRoot(double number)//sub d
 {
-    if(number <0) exit(1);
-    double precision =0.000000001;
+    if(number <0){ exit(1);}
+    double precision =0.00001;
     double step=number;
-      while ((step * step - step) > precision || (number - step * step) > precision) {
-        step = (step + number / step) / 2.0;
-    }
+      while ((step * step - number) > precision || (number - step * step) > precision) //era o number no inicio
+        {
+            step = (step + number / step) / 2.0;
+        }
     return step;
 }
 

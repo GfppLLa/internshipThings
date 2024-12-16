@@ -4,3 +4,6 @@
 
 # Ignore vs_code folder
 .vscode/  
+
+# Ignore small_talk files
+*.txt

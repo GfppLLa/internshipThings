@@ -1,0 +1,6 @@
+# Ignore compiled files
+*.o
+*.out 
+
+# Ignore vs_code folder
+.vcode  

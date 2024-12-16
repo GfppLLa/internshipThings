@@ -3,4 +3,4 @@
 *.out 
 
 # Ignore vs_code folder
-.vcode  
+.vscode/  
